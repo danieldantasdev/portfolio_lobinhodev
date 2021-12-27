@@ -132,6 +132,21 @@ body.active {
     position: relative;
 }
 
+/* Components */
+.c-heading {
+    font-size: 6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    text-transform: capitalize;
+    text-align: center;
+    margin: 5rem;
+    padding: 2rem;
+    /* position: absolute; */
+    border-bottom: 4px solid var(--toggle-color);
+    max-width: 100%;
+    display: inline-block;
+}
+
 /* Header */
 header {
     width: 100%;
@@ -541,20 +556,6 @@ header {
     background: var(--body-color);
 }
 
-.l-section__item-heading {
-    font-size: 6rem;
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--text-color);
-    text-transform: capitalize;
-    text-align: center;
-    margin: 5rem;
-    padding: 2rem;
-    /* position: absolute; */
-    border-bottom: 4px solid var(--toggle-color);
-    max-width: 100%;
-    display: inline-block;
-}
-
 /* 
 .l-section__skill-heading::after {
     content: '';
@@ -570,13 +571,14 @@ header {
 
 .l-section__skill-container {
     width: 95%;
-    margin: auto;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 3fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
     gap: 10rem;
     color: var(--text-color);
     font-family: var(--font-primary);
     font-size: 2rem;
+    padding: 2rem;
 }
 
 /* @media (max-width: 768px) {
@@ -668,59 +670,54 @@ header {
     color: #4fdfff;
 }
 
-/* Projetos */
+/* project-section */
 .l-section__project {
+    width: 100%;
+    display: block;
+    margin: auto;
+    min-height: 100vh;
+    font-family: sans-serif;
+    position: relative;
+    top: 0;
+    margin: 0 auto;
     background-color: var(--body-color);
     width: 100%;
-    height: 145vh;
-    /* position: absolute; */
-    /* top: 220rem; */
 }
 
 .l-section__item-project {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
     gap: 10rem;
-    margin-bottom: 2rem;
-    cursor: pointer;
-    position: relative;
+    padding: 2rem;
+    margin: 0 auto;
+    width: 95%;
 }
 
 .l-section__card {
-    width: 50rem;
-    height: 25rem;
+    height: 40rem;
+    /* width: 57rem; */
+    margin: 0 auto;
+    position: relative;
+    border-radius: 150px;
 }
 
 .l-section__card-image {
     width: 100%;
     height: 100%;
-    background-color: #262626;
-    border-radius: 0.5rem;
-}
-
-.l-section__card-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
     object-fit: cover;
-    width: 100%;
-    height: 100%;
-    border-radius: 0.5rem;
-    opacity: 0.8;
-    transition: opacity 0.3s;
+    transition: 0.5s;
+    border-radius: 15px;
 }
 
-.l-section__card:hover .l-section__card-image img {
-    opacity: 0.5;
-}
-
-.l-section__card-info {
+.l-section__card-content {
     position: relative;
-    bottom: 0;
+    padding: 4rem;
+    color: #fff;
+    transition: 0.5s;
     opacity: 0;
-    visibility: hidden;
-    padding: 2rem;
-    text-shadow: 0.3rem 0.2rem 0.3rem var(--text-shadow);
-    transition: var(--transition-general);
 }
 
 .l-section__card-info h2 {
@@ -739,36 +736,65 @@ header {
 }
 
 .l-section__card-info p {
-    font-family: var(--font-secundary);
+    font-family: var(--font-action);
     color: var(--text-color-light);
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.5rem;
     width: 80%;
     margin-bottom: 2rem;
 }
 
-.c-button__section {
-    background: #6a3093;
-    background: -webkit-linear-gradient(to right, #a044ff, #6a3093);
-    background: linear-gradient(to left, #a044ff, #6a3093);
-    font-family: var(--font-action);
-    color: #eee;
-    border-radius: 0.5rem;
-    border: none;
-    box-shadow: 0 0.1rem 0.8rem rgba(0, 0, 0, 0.4);
-}
-
-.l-section__card-info button {
-    width: 15rem;
-    height: 2.5rem;
+.project-title {
+    font-size: 5rem;
+    text-transform: capitalize;
     text-align: center;
-    display: flex;
-    align-items: center;
-    padding: 2rem 4rem;
+    font-weight: 300;
 }
 
-.l-section__card:hover .l-section__card-info {
-    bottom: 28rem;
+.project-info {
+    margin: 4rem;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.project-btn-grp {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+}
+
+.project-btn {
+    height: 4rem;
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.project-btn.live {
+    background: none;
+    border: 2px solid #fff;
+}
+
+.l-section__card:hover .l-section__card-image {
+    filter: blur(1rem);
+}
+
+.l-section__card:hover .l-section__card-content {
     opacity: 1;
-    visibility: visible;
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 40%;
+    }
+
+    .c-heading {
+        margin: 3rem;
+        font-size: 4.5rem;
+    }
 }
