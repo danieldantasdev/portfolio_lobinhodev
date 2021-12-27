@@ -29,7 +29,7 @@
         <!-- Container -->
         <div class="l-container">
             <!-- Header -->
-            <header class="l-header">
+            <header class="l-header" id="home">
                 <div class="l-header__wrapper-image">
                     <img src="img/bg.jpg" alt="Background do Header" />
                     <div class="l-header__nav__icons">
@@ -64,25 +64,29 @@
                 <nav class="l-nav">
                     <ul class="l-nav__menu">
                         <li>
-                            <a href="#" class="hvr-underline-from-left">Home</a>
+                            <a href="#home" class="hvr-underline-from-left"
+                                >Home</a
+                            >
                         </li>
                         <li>
-                            <a href="#" class="hvr-underline-from-left"
+                            <a
+                                href="#conhecimentos"
+                                class="hvr-underline-from-left"
                                 >Conhecimentos</a
                             >
                         </li>
                         <li>
-                            <a href="#" class="hvr-underline-from-left"
+                            <a href="#projetos" class="hvr-underline-from-left"
                                 >Projetos</a
                             >
                         </li>
                         <li>
-                            <a href="#" class="hvr-underline-from-left"
+                            <a href="#Contato" class="hvr-underline-from-left"
                                 >Contato</a
                             >
                         </li>
                         <li>
-                            <a href="#" class="hvr-underline-from-left"
+                            <a href="#Orçamento" class="hvr-underline-from-left"
                                 >Orçamento</a
                             >
                         </li>
@@ -105,9 +109,9 @@
                 </div>
             </aside>
             <!-- Skill -->
-            <section class="l-section__skill">
+            <section class="l-section__skill" id="conhecimentos">
                 <div class="l-section__skill-item">
-                    <h1 class="l-section__skill-heading">Conhecimentos</h1>
+                    <h1 class="l-section__item-heading">Conhecimentos</h1>
                     <div class="l-section__skill-container">
                         <div class="l-section__skill-item__card">
                             <img
@@ -183,7 +187,68 @@
                     </div>
                 </div>
             </section>
-            <!-- Timeline -->
+            <!-- Projetos -->
+            <section class="l-section__project">
+                <div>
+                    <h1 class="l-section__item-heading">Projetos</h1>
+                </div>
+                <div class="l-section__item-project">
+                    <div class="l-section__card">
+                        <div class="l-section__card-image">
+                            <img src="img/proj1.jpg" alt="" />
+                        </div>
+                        <div class="l-section__card-info">
+                            <h2>ToDo List</h2>
+                            <h3>Javascript</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Cupiditate ducimus vero maxime
+                                amet magnam doloribus eos consequatur expedita
+                                architecto hic?
+                            </p>
+                            <button class="c-button__section">
+                                Saiba Mais
+                            </button>
+                        </div>
+                    </div>
+                    <div class="l-section__card">
+                        <div class="l-section__card-image">
+                            <img src="img/proj2.jpg" alt="" />
+                        </div>
+                        <div class="l-section__card-info">
+                            <h2>Maratona</h2>
+                            <h3>HTML, CSS</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Dolores, vero aliquam?
+                                Pariatur libero voluptas ipsam ullam consectetur
+                                ab facilis cumque.
+                            </p>
+                            <button class="c-button__section">
+                                Saiba Mais
+                            </button>
+                        </div>
+                    </div>
+                    <div class="l-section__card">
+                        <div class="l-section__card-image">
+                            <img src="img/proj3.jpg" alt="" />
+                        </div>
+                        <div class="l-section__card-info">
+                            <h2>Casa Bela</h2>
+                            <h3>HTML</h3>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Est pariatur soluta doloremque
+                                tempore nisi placeat, eveniet voluptate
+                                recusandae. Eius, sapiente?
+                            </p>
+                            <button class="c-button__section">
+                                Saiba Mais
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
         <script src="js/index.js"></script>
     </body>

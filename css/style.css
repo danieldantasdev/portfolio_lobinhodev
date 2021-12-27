@@ -43,7 +43,8 @@
 
 html {
     font-size: 62.5%;
-    background: var(--wrapper-color);
+    background: #171717;
+    filter: brightness(0.9);
     font-family: 'Poppins', sans-serif;
     /* font-family: Nunito, -apple-system, BlinkMacSystemFont, avenir next, avenir,
       segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif; */
@@ -68,6 +69,7 @@ html::-webkit-scrollbar-thumb {
 
 body {
     opacity: 0.9;
+    background: #000;
 }
 
 body.active {
@@ -124,6 +126,11 @@ body.active {
 ::-webkit-outer-spin-button {
     color: var(--color-webfatorial-red);
 } */
+
+/* Container */
+.l-container {
+    position: relative;
+}
 
 /* Header */
 header {
@@ -312,12 +319,14 @@ header {
     align-items: center;
     justify-content: center;
     opacity: 0;
+    visibility: hidden;
     transition: var(--transition-general);
     z-index: 1;
 }
 
 .l-nav__container.show-menu {
     opacity: 1;
+    visibility: visible;
 }
 
 /* 
@@ -521,9 +530,9 @@ header {
 
 /* Skills */
 .l-section__skill {
-    position: absolute;
+    /* position: absolute;
     left: 0;
-    right: 0;
+    right: 0; */
 
     background: var(--body-color);
 }
@@ -532,18 +541,32 @@ header {
     background: var(--body-color);
 }
 
-.l-section__skill-heading {
-    text-align: center;
+.l-section__item-heading {
     font-size: 6rem;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--text-color);
     text-transform: capitalize;
-    margin-bottom: 10rem;
+    text-align: center;
+    margin: 5rem;
+    padding: 2rem;
+    /* position: absolute; */
+    border-bottom: 4px solid var(--toggle-color);
+    max-width: 100%;
+    display: inline-block;
 }
 
-.l-section__skill-heading {
-    margin: 5rem;
-}
+/* 
+.l-section__skill-heading::after {
+    content: '';
+    width: 500px;
+    height: 4px;
+    border-radius: 5rem;
+    left: 80px;
+    right: 20px;
+    top: 80px;
+    position: absolute;
+    background: #4fa0ff;
+} */
 
 .l-section__skill-container {
     width: 95%;
@@ -645,4 +668,107 @@ header {
     color: #4fdfff;
 }
 
-/* Timeline */
+/* Projetos */
+.l-section__project {
+    background-color: var(--body-color);
+    width: 100%;
+    height: 145vh;
+    /* position: absolute; */
+    /* top: 220rem; */
+}
+
+.l-section__item-project {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.l-section__card {
+    width: 50rem;
+    height: 25rem;
+}
+
+.l-section__card-image {
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    border-radius: 0.5rem;
+}
+
+.l-section__card-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.l-section__card:hover .l-section__card-image img {
+    opacity: 0.5;
+}
+
+.l-section__card-info {
+    position: relative;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    padding: 2rem;
+    text-shadow: 0.3rem 0.2rem 0.3rem var(--text-shadow);
+    transition: var(--transition-general);
+}
+
+.l-section__card-info h2 {
+    font-family: var(--font-primary);
+    font-size: 4rem;
+    font-weight: 500;
+    color: var(--text-color-light);
+}
+
+.l-section__card-info h3 {
+    font-family: var(--font-action);
+    font-weight: bolder;
+    font-size: 2rem;
+    color: #ff4081;
+    margin-bottom: 1.5rem;
+}
+
+.l-section__card-info p {
+    font-family: var(--font-secundary);
+    color: var(--text-color-light);
+    font-weight: 400;
+    font-size: 2rem;
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+.c-button__section {
+    background: #6a3093;
+    background: -webkit-linear-gradient(to right, #a044ff, #6a3093);
+    background: linear-gradient(to left, #a044ff, #6a3093);
+    font-family: var(--font-action);
+    color: #eee;
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 0 0.1rem 0.8rem rgba(0, 0, 0, 0.4);
+}
+
+.l-section__card-info button {
+    width: 15rem;
+    height: 2.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 2rem 4rem;
+}
+
+.l-section__card:hover .l-section__card-info {
+    bottom: 28rem;
+    opacity: 1;
+    visibility: visible;
+}
