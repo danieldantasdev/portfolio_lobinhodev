@@ -686,7 +686,7 @@ header {
 
 .l-section__item-project {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 3fr));
     gap: 10rem;
     padding: 2rem;
     margin: 0 auto;
@@ -797,4 +797,119 @@ header {
         margin: 3rem;
         font-size: 4.5rem;
     }
+}
+
+/* Scrolldown */
+.scrolldown {
+    --color: #6419aa;
+    --sizeX: 60px;
+    --sizeY: 80px;
+    position: fixed;
+    /* z-index: 9999; */
+    /* top: 900px; */
+    /* left: 2000px; */
+    /* top: 900px;
+    right: 5rem; */
+    right: 4rem;
+    bottom: 1rem;
+    /* left: 0; */
+    /* left: 200rem; */
+    width: var(--sizeX);
+    height: var(--sizeY);
+    /* margin-left: var(sizeX / 2); */
+    /* margin-left: 205rem; */
+    border: calc(var(--sizeX) / 10) solid var(--toggle-color);
+    border-radius: 50px;
+    /* box-sizing: border-box;
+    margin-bottom: 16px; */
+    /* opacity: 0;
+    visibility: hidden; */
+}
+
+.scrolldown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scrolldown::before {
+    content: '';
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    margin-left: -4px;
+    background-color: var(--toggle-color);
+    border-radius: 100%;
+    animation: scrolldown-anim 2s infinite;
+    box-sizing: border-box;
+    box-shadow: 0px -5px 3px 1px #ffffff66;
+}
+
+@keyframes scrolldown-anim {
+    0% {
+        height: 3px;
+        opacity: 0;
+    }
+    40% {
+        transform: translate(0, 20px);
+        height: 10px;
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+        height: 10px;
+    }
+    100% {
+        opacity: 0;
+        height: 6px;
+    }
+}
+.chevrons {
+    padding: 6px 0 0 0;
+    margin-left: -3px;
+    /* margin-top: 70px; */
+    width: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.chevronup {
+    margin-top: -40px;
+    position: relative;
+    border: solid var(--toggle-color);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    transform: rotate(-135deg);
+}
+.chevronup:nth-child(odd) {
+    animation: pulse 500ms ease infinite alternate;
+}
+.chevronup:nth-child(even) {
+    animation: pulse 500ms ease infinite alternate 250ms;
+}
+@keyframes pulse {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+/*copy until here */
+
+/* About */
+.l-about {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }

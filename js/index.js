@@ -54,3 +54,21 @@ function atualizarPreco() {
 
     document.querySelector('#preco').innerHTML = `R$ ${preco.toFixed(2)}`
 }
+
+/* Botão voltar para o topo = escrevendo em camel Case*/
+const backToTopButton = document.querySelector('.scrolldown') /* Kebab case*/
+
+function backToTop() {
+    if (window.scrollY >= 560) {
+        backToTopButton.classList.add('show')
+    } else {
+        backToTopButton.classList.remove('show')
+    }
+}
+
+/* When Scroll */
+window.addEventListener('scroll', function () {
+    changeHeaderWhenScroll()
+    backToTop()
+    activateMenuAtCurrentSection()
+})
