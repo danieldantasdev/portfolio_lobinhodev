@@ -50,15 +50,14 @@ html {
     font-size: 62.5%;
     background: #171717;
     filter: brightness(0.9);
-    font-family: 'Poppins', sans-serif;
-    /* font-family: Nunito, -apple-system, BlinkMacSystemFont, avenir next, avenir,
-      segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif; */
+    caret-color: var(--toggle-color);
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 10rem;
 }
 
+/* ==================== Overflow ==================== */
 html::-webkit-scrollbar,
 .l-section__contact::-webkit-scrollbar {
     width: 1rem;
@@ -73,6 +72,45 @@ html::-webkit-scrollbar-thumb,
 .l-section__contact::-webkit-scrollbar-thumb {
     background: var(--webkit-scrollbar-thumb-color);
     border-radius: 5rem;
+}
+
+/* ==================== Seleções e formatação ==================== */
+:focus-visible {
+    outline-color: var(--toggle-color);
+}
+
+::selection {
+    background: var(--toggle-color);
+    color: var(--wrapper-color);
+}
+
+::marker {
+    color: var(--toggle-color);
+}
+
+::-webkit-calendar-picker-indicator {
+    color: var(--toggle-color);
+}
+
+::-webkit-clear-button {
+    color: var(--toggle-color);
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+    color: var(--toggle-color);
+}
+
+/* ==================== Tirando a seleção ==================== */
+code,
+.l-header__wrapper-image img,
+.l-header__banner img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 body {
@@ -93,47 +131,6 @@ body.active {
     --text-span-color: #9257ff;
     --text-color-light: #c3b6ee;
 }
-
-/* Elemento não sofrerá a seleção */
-.l-header__wrapper-image img,
-.l-header__banner img {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-/* html {
-    caret-color: var(--color-webfatorial-red);
-} */
-
-/* :focus-visible {
-    outline-color: var(--color-webfatorial-red);
-}
-
-::selection {
-    background-color: var(--color-webfatorial-red);
-    color: var(--color-webfatorial-primary);
-}
-
-::marker {
-    color: var(--color-webfatorial-red);
-}
-
-::-webkit-calendar-picker-indicator {
-    color: var(--color-webfatorial-red);
-}
-
-::-webkit-clear-button {
-    color: var(--color-webfatorial-red);
-}
-
-::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
-    color: var(--color-webfatorial-red);
-} */
 
 /* ==================== Container ==================== */
 .l-container {
@@ -923,6 +920,13 @@ code::after {
     opacity: 0;
 }
 
+@media (max-width: 768px) {
+    .l-section__project-card-content {
+        padding: var(--padding);
+        opacity: 1;
+    }
+}
+
 .l-section__project-card-content-info h2 {
     font-family: var(--font-primary);
     font-size: 5rem;
@@ -1015,8 +1019,9 @@ code::after {
 
 /* ==================== Contact ==================== */
 .l-section__contact {
-    height: 80vh;
-    position: relative;
+    font-family: var(--font-primary);
+    /* height: 80vh; */
+    /* position: relative; */
     margin-bottom: 10rem;
     width: var(--width);
     margin: var(--margin);
@@ -1024,14 +1029,14 @@ code::after {
     overflow-y: scroll;
 }
 .l-section__contact-item {
-    position: relative;
+    /* position: relative; */
     max-width: 720px;
     padding: 2rem;
     overflow: hidden;
     margin: 0 auto;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .l-section__contact-item-area {
         top: 1rem;
         height: 70vh;
@@ -1051,7 +1056,7 @@ code::after {
         transform: translate(-50%, -50%);
         max-width: 720px;
     }
-}
+} */
 .l-section__contact-card {
     float: left;
     width: 100%;
