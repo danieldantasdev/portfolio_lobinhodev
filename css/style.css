@@ -1026,8 +1026,8 @@ code::after {
     overflow-y: scroll;
 }
 .l-section__contact-item {
-    /* position: relative; */
-    max-width: 800px;
+    min-width: 200px;
+    max-width: 720px;
     padding: 2rem;
     overflow: hidden;
     margin: 0 auto;
