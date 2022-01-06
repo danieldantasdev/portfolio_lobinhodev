@@ -1023,7 +1023,7 @@ code::after {
     width: var(--width);
     margin: var(--margin);
     padding: var(--padding);
-    overflow-y: hidden;
+    overflow: hidden;
 }
 .l-section__contact-item {
     /* position: relative; */
