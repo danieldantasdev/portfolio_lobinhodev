@@ -1080,7 +1080,7 @@ code::after {
     align-items: center;
 }
 
-@media (max-width: 414px) {
+@media (max-width: 500px) {
     .l-section__contact-card section .content {
         flex-direction: column;
     }
