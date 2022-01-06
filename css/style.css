@@ -1026,7 +1026,7 @@ code::after {
     width: var(--width);
     margin: var(--margin);
     padding: var(--padding);
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 .l-section__contact-item {
     /* position: relative; */
