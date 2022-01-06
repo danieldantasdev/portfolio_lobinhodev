@@ -58,18 +58,15 @@ html {
 }
 
 /* ==================== Overflow ==================== */
-html::-webkit-scrollbar,
-.l-section__contact::-webkit-scrollbar {
+html::-webkit-scrollbar {
     width: 1rem;
 }
 
-html::-webkit-scrollbar-track,
-.l-section__contact::-webkit-scrollbar-track {
+html::-webkit-scrollbar-track {
     background: var(--webkit-scrollbar-track-color);
 }
 
-html::-webkit-scrollbar-thumb,
-.l-section__contact::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb {
     background: var(--webkit-scrollbar-thumb-color);
     border-radius: 5rem;
 }
