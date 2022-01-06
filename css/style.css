@@ -1022,7 +1022,7 @@ code::after {
     margin-bottom: 10rem;
     width: var(--width);
     margin: var(--margin);
-    padding: 4rem 0;
+    /* padding: 4rem 0; */
     /* padding: var(--padding); */
     overflow-y: scroll;
 }
@@ -1032,7 +1032,7 @@ code::after {
 
     /* min-width: 400px; */
 
-    padding: 2rem;
+    padding: var(--padding);
     overflow: hidden;
     margin: 0 auto;
 }
