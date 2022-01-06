@@ -1031,7 +1031,7 @@ code::after {
     max-width: 720px;
     width: var(--width);
 
-    min-width: 300px;
+    min-width: 400px;
 
     padding: var(--padding);
     overflow: hidden;
