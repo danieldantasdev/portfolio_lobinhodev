@@ -1023,11 +1023,11 @@ code::after {
     width: var(--width);
     margin: var(--margin);
     padding: var(--padding);
-    overflow: hidden;
+    overflow-y: scroll;
 }
 .l-section__contact-item {
     /* position: relative; */
-    max-width: 720px;
+    max-width: 800px;
     padding: 2rem;
     overflow: hidden;
     margin: 0 auto;
