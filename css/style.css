@@ -1022,12 +1022,16 @@ code::after {
     margin-bottom: 10rem;
     width: var(--width);
     margin: var(--margin);
-    padding: var(--padding);
+    padding: 4rem 0;
+    /* padding: var(--padding); */
     overflow-y: scroll;
 }
 .l-section__contact-item {
-    min-width: 400px;
     max-width: 720px;
+    width: var(--width);
+
+    /* min-width: 400px; */
+
     padding: 2rem;
     overflow: hidden;
     margin: 0 auto;
@@ -1075,6 +1079,13 @@ code::after {
     justify-content: center;
     align-items: center;
 }
+
+@media (max-width: 414px) {
+    .l-section__contact-card section .content {
+        flex-direction: column;
+    }
+}
+
 @media (min-width: 414px) {
     .l-section__contact-card section .content {
         text-align: left;
@@ -1277,13 +1288,13 @@ code::after {
     transition: all 0.7s;
 }
 .l-section__contact-item nav.active a:nth-of-type(1) {
-    transition-delay: 0.5s;
+    transition-delay: 0.2s;
 }
 .l-section__contact-item nav.active a:nth-of-type(2) {
-    transition-delay: 0.7s;
+    transition-delay: 0.8s;
 }
 .l-section__contact-item nav.active a:nth-of-type(3) {
-    transition-delay: 0.9s;
+    transition-delay: 1.4s;
 }
 .l-section__contact-item nav a {
     float: left;
