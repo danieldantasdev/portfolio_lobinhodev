@@ -27,36 +27,8 @@ menuHamburguer.addEventListener('click', () => {
         .classList.toggle('show-menu')
 })
 
-/* Orçamento */
-document.querySelector('#qtde').addEventListener('change', atualizarPreco)
-document.querySelector('#js').addEventListener('change', atualizarPreco)
-document.querySelector('#layout-sim').addEventListener('change', atualizarPreco)
-document.querySelector('#layout-nao').addEventListener('change', atualizarPreco)
-document.querySelector('#prazo').addEventListener('change', function () {
-    const prazo = document.querySelector('#prazo').value
-    document.querySelector(
-        'label[for=prazo]'
-    ).innerHTML = `Prazo: ${prazo} semanas`
-    atualizarPreco()
-})
-
-function atualizarPreco() {
-    const qtde = document.querySelector('#qtde').value
-    const temJS = document.querySelector('#js').checked
-    const incluiLayout = document.querySelector('#layout-sim').checked
-    const prazo = document.querySelector('#prazo').value
-
-    let preco = qtde * 100
-    if (temJS) preco *= 1.1
-    if (incluiLayout) preco += 500
-    let taxaUrgencia = 1 - prazo * 0.1
-    preco *= 1 + taxaUrgencia
-
-    document.querySelector('#preco').innerHTML = `R$ ${preco.toFixed(2)}`
-}
-
 /* Botão voltar para o topo = escrevendo em camel Case*/
-const backToTopButton = document.querySelector('.scrolldown') /* Kebab case*/
+const backToTopButton = document.querySelector('.scroll-to-top') /* Kebab case*/
 
 function backToTop() {
     if (window.scrollY >= 560) {
@@ -66,9 +38,24 @@ function backToTop() {
     }
 }
 
-/* When Scroll */
-window.addEventListener('scroll', function () {
-    changeHeaderWhenScroll()
-    backToTop()
-    activateMenuAtCurrentSection()
+var offset = 1000
+var duration = 100
+jQuery(window).on('scroll', function () {
+    if (jQuery(this).scrollTop() > offset) {
+        jQuery('.scroll-to-top').addClass('show')
+    } else {
+        jQuery('.scroll-to-top').removeClass('show')
+    }
+})
+jQuery('.scroll-to-top').on('click', function (event) {
+    event.preventDefault()
+    jQuery('html, body').animate({ scrollTop: 0 }, duration)
+    return false
+})
+
+/* Contact */
+$('button').click(function () {
+    $('button').toggleClass('active')
+    $('.title').toggleClass('active')
+    $('nav').toggleClass('active')
 })
