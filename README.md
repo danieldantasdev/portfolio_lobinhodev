@@ -29,7 +29,7 @@
 
 ## 📢 Visite o site
 
-[Portfólio](https://lobinhodev.github.io/Portifolio-lobinhodev/).
+[Portfólio](https://lobinhodev.github.io/Portfolio-lobinhodev/).
 
 ## 🧠 Tecnologias
 
