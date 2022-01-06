@@ -1024,7 +1024,8 @@ code::after {
     margin: var(--margin);
     /* padding: 4rem 0; */
     /* padding: var(--padding); */
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
+    overflow: hidden;
 }
 .l-section__contact-item {
     max-width: 720px;
