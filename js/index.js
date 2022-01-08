@@ -59,3 +59,22 @@ $('button').click(function () {
     $('.title').toggleClass('active')
     $('nav').toggleClass('active')
 })
+
+/* ScrollReveal: Mostrar elementos quando der scroll na página */
+const scrollReveal = ScrollReveal({
+    origin: 'top',
+    distance: '30px',
+    duration: 700,
+    reset: true
+})
+
+scrollReveal.reveal(
+    `
+    #about .l-section__about-card,
+    #skills .l-section__skill-card-item,
+    #projects .l-section__project-card-item,
+    #interesting .l-section__interesting-card-content,
+    #contact 
+    `,
+    { interval: 200 }
+)

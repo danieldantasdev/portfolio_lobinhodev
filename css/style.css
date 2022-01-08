@@ -330,7 +330,6 @@ header {
     font-family: var(--font-action);
     font-weight: 500;
     font-size: 1.5em;
-    color: var(--text-color);
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     background: var(--button-color); /* fallback for old browsers */
@@ -351,15 +350,19 @@ header {
     transition: var(--transition-general);
     opacity: 0;
     animation: moveBanner 1s 0.9s forwards;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .l-header__banner button:hover {
     filter: brightness(0.5);
     letter-spacing: 0.3rem;
     color: var(--text-color-light);
+}
+
+.l-header__banner button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
 }
 
 @keyframes moveBanner {
@@ -608,6 +611,7 @@ header {
 .coffe {
     /* opacity: 0; */
     font-size: 3rem;
+    font-family: var(--font-primary);
     color: var(--text-color-light);
     position: absolute;
     bottom: 2rem;
@@ -1024,7 +1028,7 @@ code::after {
     width: var(--width);
     margin: var(--margin);
     /* padding: 4rem 0; */
-    /* padding: var(--padding); */
+    padding: 2rem;
     /* overflow-y: scroll; */
     overflow: hidden;
 }
