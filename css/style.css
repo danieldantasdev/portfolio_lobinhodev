@@ -194,7 +194,7 @@ header {
     /* opacity: 0; */
     /* animation: moveIcons 1s 0.9s forwards; */
     transition: var(--transition-general);
-    z-index: 2;
+    z-index: 3;
     text-shadow: 0.1rem 0.1rem 1px var(--text-shadow);
 }
 
@@ -366,7 +366,7 @@ header {
     opacity: 0;
     visibility: hidden;
     transition: var(--transition-general);
-    z-index: 1;
+    z-index: 2;
 }
 
 .l-nav__container.show-menu {
@@ -983,7 +983,7 @@ code::after {
     justify-content: center;
     align-items: center;
     gap: 10rem;
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 @media (max-width: 1200px) {
@@ -994,7 +994,7 @@ code::after {
 
 .l-section__interesting-card-content-icon {
     background: var(--toggle-color);
-    padding: var(--padding);
+    padding: 3rem;
     border-radius: 50%;
     color: var(--text-color-light);
     transition: var(--transition-general);
@@ -1008,6 +1008,7 @@ code::after {
 
 .l-section__interesting-card-content-icon i {
     transition: var(--transition-general);
+    margin: 0 auto;
 }
 
 .l-section__interesting-card-content-icon i:hover {
@@ -1060,21 +1061,19 @@ code::after {
     }
 } */
 .l-section__contact-card {
-    float: left;
     width: 100%;
     position: relative;
 }
-.l-section__contact-card section {
+.l-section__contact-card-content {
     border-radius: 5px;
-    float: left;
+
     width: 100%;
     background-color: var(--toggle-color);
 }
-.l-section__contact-card section .content {
-    float: left;
+.l-section__contact-card-content .content {
     width: 100%;
-    padding: 20px 30px 50px 30px;
-    position: relative;
+    padding: var(--padding);
+    /* position: relative; */
     text-align: center;
     display: flex;
     justify-content: center;
@@ -1082,51 +1081,47 @@ code::after {
 }
 
 @media (max-width: 500px) {
-    .l-section__contact-card section .content {
+    .l-section__contact-card-content .content {
         flex-direction: column;
     }
 }
 
 @media (min-width: 414px) {
-    .l-section__contact-card section .content {
+    .l-section__contact-card-content .content {
         text-align: left;
     }
 }
-.l-section__contact-card section .content img {
+.l-section__contact-card-content .content img {
     display: inline-block;
     width: 140px;
     border-radius: 50%;
 }
-@media (min-width: 414px) {
-    .l-section__contact-card section .content img {
-        float: left;
-        width: 30%;
-        margin-right: 10%;
+/* @media (min-width: 414px) {
+    .l-section__contact-card-content .content img {
+        width: 50%;
     }
-}
-.l-section__contact-card section .content aside {
-    float: left;
+} */
+.l-section__contact-card-content .content aside {
     width: 100%;
     color: #ffffff;
-    margin-top: 10px;
+    margin: 2rem;
 }
-@media (min-width: 414px) {
-    .l-section__contact-card section .content aside {
+/* @media (min-width: 414px) {
+    .l-section__contact-card-content .content aside {
         width: 60%;
     }
-}
-.l-section__contact-card section .content aside h1 {
+} */
+.l-section__contact-card-content .content aside h1 {
     font-weight: 100;
     font-size: 22px;
     margin-bottom: 10px;
 }
-.l-section__contact-card section .content aside p {
+.l-section__contact-card-content .content aside p {
     font-size: 14px;
     letter-spacing: 0.5px;
     line-height: 160%;
 }
 .l-section__contact-card .title {
-    float: left;
     width: 100%;
     background-color: var(--wrapper-color);
     max-height: 0px;
@@ -1195,7 +1190,7 @@ code::after {
     transition-delay: 0.1s;
     outline: none;
     overflow: hidden;
-    z-index: 0;
+    z-index: 1;
     font-family: inherit;
     cursor: pointer;
 }
@@ -1251,7 +1246,8 @@ code::after {
     transition-delay: 0.5s;
 }
 .l-section__contact-item nav {
-    float: left;
+    /* float: left; */
+
     width: 100%;
     overflow: hidden;
     max-height: 0px;
@@ -1261,7 +1257,7 @@ code::after {
     transition: all 0.5s;
 }
 
-.l-section__contact-item .l-nav__item {
+.l-nav__item {
     transition: var(--transition-general);
 }
 
@@ -1287,6 +1283,8 @@ code::after {
     -moz-transition: all 0.7s;
     -o-transition: all 0.7s;
     transition: all 0.7s;
+
+    /* flex-direction: row; */
 }
 .l-section__contact-item nav.active a:nth-of-type(1) {
     transition-delay: 0.2s;
@@ -1315,7 +1313,10 @@ code::after {
     -ms-transform: translateY(-10px);
     -o-transform: translateY(-10px);
     transform: translateY(-10px);
-    position: relative;
+    /* position: relative; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
 }
 
 @media (min-width: 414px) {
@@ -1336,26 +1337,13 @@ code::after {
 .l-section__contact-item nav a .arrow path {
     fill: #e6e6e6;
 }
-.l-section__contact-item nav a.gmail .icon svg {
-    background-color: #d14836;
+
+.l-section__contact-item nav a .content h1 {
+    color: var(--growth-color);
 }
-.l-section__contact-item nav a.gmail .content h1 {
-    color: #d14836;
-}
-.l-section__contact-item nav a.facebook .icon svg {
-    background-color: #3b5998;
-}
-.l-section__contact-item nav a.facebook .content h1 {
-    color: #3b5998;
-}
-.l-section__contact-item nav a.twitter .icon svg {
-    background-color: #1da1f2;
-}
-.l-section__contact-item nav a.twitter .content h1 {
-    color: #1da1f2;
-}
+
 .l-section__contact-item nav a .icon {
-    float: left;
+    /* float: left; */
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -1367,6 +1355,7 @@ code::after {
     height: 100%;
     padding: 1rem;
     font-size: 4rem;
+    color: var(--toggle-color);
 }
 
 .l-section__contact-item nav a .content h1 {
@@ -1376,10 +1365,17 @@ code::after {
     letter-spacing: 0.4px;
 }
 .l-section__contact-item nav a .content span {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: #b3b3b3;
     display: block;
     letter-spacing: 0.4px;
+}
+.nav-contact {
+    width: 100%;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    flex-direction: row;
 }
 
 /* ==================== Footer ==================== */
@@ -1419,7 +1415,7 @@ code::after {
 /* ==================== Scroll-to-top ==================== */
 .scroll-to-top {
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     right: 2rem;
     bottom: 1rem;
     width: 60px;
@@ -1441,7 +1437,7 @@ code::after {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-    z-index: 1;
+    z-index: 2;
 }
 
 .scroll-to-top::before {
