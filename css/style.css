@@ -98,18 +98,6 @@ html::-webkit-scrollbar-thumb {
     color: var(--toggle-color);
 }
 
-/* ==================== Tirando a seleção ==================== */
-code,
-.l-header__wrapper-image img,
-.l-header__banner img {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
 body {
     opacity: 0.9;
     background: var(--body-color);
@@ -127,6 +115,18 @@ body.active {
     --text-color: #fff;
     --text-span-color: #9257ff;
     --text-color-light: #c3b6ee;
+}
+
+/* ==================== Tirando a seleção ==================== */
+code,
+.l-header__wrapper-image img,
+.l-header__banner img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 /* ==================== Container ==================== */
@@ -175,6 +175,27 @@ body.active {
 
 .c-button.live:hover {
     border-color: var(--toggle-color);
+}
+
+.c-social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-social-media a {
+    font-size: 3rem;
+    color: var(--toggle-color);
+    transition: var(--transition-general);
+    /* margin-top: 1rem; */
+}
+
+.c-social-media a:hover {
+    filter: brightness(0.1);
+}
+
+.c-social-media a + a {
+    margin-left: 2rem;
 }
 
 /* ==================== Header ==================== */
@@ -463,27 +484,6 @@ header {
     top: 5%;
     left: 75%;
 } */
-
-.c-social-media {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.c-social-media a {
-    font-size: 3rem;
-    color: var(--toggle-color);
-    transition: var(--transition-general);
-    /* margin-top: 1rem; */
-}
-
-.c-social-media a:hover {
-    filter: brightness(0.1);
-}
-
-.c-social-media a + a {
-    margin-left: 2rem;
-}
 
 /* ==================== Animation do Header ==================== */
 .animation-area {
