@@ -914,7 +914,13 @@ code::after {
 }
 
 .l-section__project-card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
     position: relative;
+    top: 6rem;
     padding: 1rem;
     color: #fff;
     transition: var(--transition-items);
@@ -1028,7 +1034,7 @@ code::after {
     width: var(--width);
     margin: var(--margin);
     /* padding: 4rem 0; */
-    padding: 2rem;
+    /* padding: 2rem; */
     /* overflow-y: scroll; */
     overflow: hidden;
 }
