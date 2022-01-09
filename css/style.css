@@ -1375,7 +1375,7 @@ code::after {
     letter-spacing: 0.4px;
 }
 .l-section__contact-item nav a .content span {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     color: #b3b3b3;
     display: block;
     letter-spacing: 0.4px;
@@ -1386,6 +1386,7 @@ code::after {
     justify-content: stretch;
     align-items: center;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 /* ==================== Footer ==================== */
