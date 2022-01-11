@@ -78,3 +78,14 @@ scrollReveal.reveal(
     `,
     { interval: 200 }
 )
+
+/* bug reprodução */
+var myVideo = document.getElementById('video-project')
+
+function playVid() {
+    myVideo.play()
+}
+
+function pauseVid() {
+    myVideo.pause()
+}
