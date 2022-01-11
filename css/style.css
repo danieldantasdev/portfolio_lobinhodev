@@ -927,12 +927,13 @@ code::after {
 .l-section__project-card-image {
     width: 100%;
     height: 100%;
-    /* position: absolute;
+    position: absolute;
     top: 0;
-    left: 0; */
+    left: 0;
     object-fit: cover;
     transition: var(--transition-general);
     border-radius: 15px;
+    z-index: 1;
 }
 
 .l-section__project-card-content {
@@ -947,6 +948,7 @@ code::after {
     color: #fff;
     transition: var(--transition-items);
     opacity: 0;
+    z-index: 2;
 }
 
 .l-section__project-card-content-icon {
@@ -981,8 +983,7 @@ code::after {
         padding: 10rem;
         margin: 0 auto;
         bottom: 50%;
-        top: 50%;
-
+        /* top: 50%; */
         opacity: 1;
     }
 
