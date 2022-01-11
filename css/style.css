@@ -444,7 +444,7 @@ header {
 
 @media (max-width: 768px) {
     .l-nav__menu li a {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 }
 
