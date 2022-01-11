@@ -914,12 +914,14 @@ code::after {
     }
 }
 
-.l-section__project-card-item:hover .l-section__project-card-image {
-    filter: blur(1rem);
-}
+@media (min-width: 768px) {
+    .l-section__project-card-item:hover .l-section__project-card-image {
+        filter: blur(1rem);
+    }
 
-.l-section__project-card-item:hover .l-section__project-card-content {
-    opacity: 1;
+    .l-section__project-card-item:hover .l-section__project-card-content {
+        opacity: 1;
+    }
 }
 
 .l-section__project-card-image {
