@@ -89,3 +89,34 @@ function playVid() {
 function pauseVid() {
     myVideo.pause()
 }
+
+var ONLYONETIME_EXECUTE = null
+window.addEventListener(
+    'load',
+    function () {
+        // on page load
+
+        document.body.addEventListener(
+            'touchstart',
+            function (e) {
+                if (ONLYONETIME_EXECUTE == null) {
+                    video.play()
+
+                    //if you want to prepare more than one video/audios use this trick :
+                    video2.play()
+                    video2.pause()
+                    // now video2 is buffering and you can play it programmability later
+                    // My personal testing was maximum 6 video/audio for Android
+                    // and maybe 3 max for iOS using single click or touch.
+                    // Every next click also can prepare more audios/videos.
+
+                    ONLYONETIME_EXECUTE = 0
+                }
+            },
+            false
+        )
+    },
+    false
+)
+
+// It is very usually that user touch screen  ...
