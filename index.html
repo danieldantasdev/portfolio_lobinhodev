@@ -349,13 +349,18 @@
                     <div class="l-section__project-card">
                         <div class="l-section__project-card-item">
                             <video
-                                src="img/projects/beautysalon.mp4"
                                 class="l-section__project-card-image"
                                 alt=""
-                                autoplay
-                                loop
-                                muted
-                            ></video>
+                                autoplay="autoplay"
+                                loop="loop"
+                                onended="this.play()"
+                                muted="muted"
+                            >
+                                <source
+                                    src="img/projects/beautysalon.mp4"
+                                    type="video/mp4"
+                                />
+                            </video>
 
                             <div class="l-section__project-card-content">
                                 <div
