@@ -442,6 +442,12 @@ header {
     filter: brightness(0.8);
 }
 
+@media (max-width: 768px) {
+    .l-nav__menu li a {
+        font-size: 2rem;
+    }
+}
+
 .l-nav__menu-resume {
     background: var(--toggle-color);
 }
