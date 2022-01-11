@@ -443,8 +443,12 @@ header {
 }
 
 @media (max-width: 768px) {
+    .l-nav__menu li {
+        margin-bottom: 3rem;
+    }
+
     .l-nav__menu li a {
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
 }
 
