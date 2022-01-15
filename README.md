@@ -1,4 +1,5 @@
 # Portfólio
+<<<<<<< HEAD
 
 ## 💻 Projeto
 
@@ -9,6 +10,8 @@
 ## 📢 Visite o site
 
 [Portfólio](https://lobinhodev.github.io/Portfolio-lobinhodev/).
+=======
+>>>>>>> 6a48fe3c98708073aba1c1e090c173ae0ddf2e1c
 
 ## Pré-requisitos
 
