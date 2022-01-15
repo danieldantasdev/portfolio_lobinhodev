@@ -224,12 +224,12 @@ header {
 #theme-btn {
     position: fixed;
     color: var(--toggle-color);
-    font-size: 3.2rem;
+    font-size: 3.5rem;
     cursor: pointer;
     /* opacity: 0; */
     /* animation: moveIcons 1s 0.9s forwards; */
     transition: var(--transition-general);
-    z-index: 3;
+    z-index: 4;
     text-shadow: 0.1rem 0.1rem 1px var(--text-shadow);
 }
 
@@ -450,16 +450,6 @@ header {
     filter: brightness(0.8);
 }
 
-@media (max-width: 768px) {
-    .l-nav__menu li {
-        margin-bottom: 3rem;
-    }
-
-    .l-nav__menu li a {
-        font-size: 2rem;
-    }
-}
-
 .l-nav__menu-resume {
     background: var(--toggle-color);
 }
@@ -629,9 +619,6 @@ header {
     border-radius: var(--border-radius);
 }
 
-@media (max-width: 768px) {
-}
-
 .coffe {
     /* opacity: 0; */
     font-size: 3rem;
@@ -698,13 +685,6 @@ code::after {
 
     100% {
         transform: scale(1);
-    }
-}
-
-@media (min-width: 768px) {
-    .l-section__about-card {
-        flex-direction: row;
-        justify-content: space-between;
     }
 }
 
@@ -916,21 +896,6 @@ code::after {
     position: relative;
     border-radius: 150px;
 }
-@media (max-width: 768px) {
-    .l-section__project-card-item {
-        height: 70rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .l-section__project-card-item:hover .l-section__project-card-image {
-        filter: blur(1rem);
-    }
-
-    .l-section__project-card-item:hover .l-section__project-card-content {
-        opacity: 1;
-    }
-}
 
 .l-section__project-card-image {
     width: 100%;
@@ -973,31 +938,6 @@ code::after {
     justify-content: center;
     align-items: center;
     gap: 3rem;
-}
-
-@media (max-width: 768px) {
-    html {
-        font-size: 50%;
-    }
-
-    .c-heading {
-        margin: 3rem;
-        font-size: 4.5rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .l-section__project-card-content {
-        padding: 10rem;
-        margin: 0 auto;
-        bottom: 50%;
-        /* top: 50%; */
-        opacity: 1;
-    }
-
-    .l-section__project-card-content-button {
-        gap: 4rem;
-    }
 }
 
 /* ==================== Interesting ==================== */
@@ -1048,48 +988,19 @@ code::after {
 /* ==================== Contact ==================== */
 .l-section__contact {
     font-family: var(--font-primary);
-    /* height: 80vh; */
-    /* position: relative; */
     margin-bottom: 10rem;
     width: var(--width);
     margin: var(--margin);
-    /* padding: 4rem 0; */
-    /* padding: 2rem; */
-    /* overflow-y: scroll; */
     overflow: hidden;
 }
 .l-section__contact-item {
     max-width: 720px;
     width: var(--width);
-
-    /* min-width: 400px; */
-
     padding: var(--padding);
     overflow: hidden;
     margin: 0 auto;
 }
 
-/* @media (max-width: 768px) {
-    .l-section__contact-item-area {
-        top: 1rem;
-        height: 70vh;
-        margin: 2rem 0;
-    }
-}
-
-@media (min-width: 1024px) {
-    .l-section__contact-item {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        max-width: 720px;
-    }
-} */
 .l-section__contact-card {
     width: 100%;
     position: relative;
@@ -1100,10 +1011,9 @@ code::after {
     width: 100%;
     background-color: var(--toggle-color);
 }
-.l-section__contact-card-content .content {
+.l-section__contact-card-content-info {
     width: 100%;
     padding: var(--padding);
-    /* position: relative; */
     text-align: center;
     display: flex;
     justify-content: center;
@@ -1111,42 +1021,34 @@ code::after {
 }
 
 @media (max-width: 500px) {
-    .l-section__contact-card-content .content {
+    .l-section__contact-card-content-info {
         flex-direction: column;
     }
 }
 
 @media (min-width: 414px) {
-    .l-section__contact-card-content .content {
+    .l-section__contact-card-content-info {
         text-align: left;
     }
 }
-.l-section__contact-card-content .content img {
+.l-section__contact-card-content-info img {
     display: inline-block;
     width: 140px;
     border-radius: 50%;
 }
-/* @media (min-width: 414px) {
-    .l-section__contact-card-content .content img {
-        width: 50%;
-    }
-} */
-.l-section__contact-card-content .content aside {
+
+.l-section__contact-card-content-info aside {
     width: 100%;
     color: #ffffff;
     margin: 2rem;
 }
-/* @media (min-width: 414px) {
-    .l-section__contact-card-content .content aside {
-        width: 60%;
-    }
-} */
-.l-section__contact-card-content .content aside h1 {
+
+.l-section__contact-card-content-info aside h1 {
     font-weight: 100;
     font-size: 22px;
     margin-bottom: 10px;
 }
-.l-section__contact-card-content .content aside p {
+.l-section__contact-card-content-info aside p {
     font-size: 14px;
     letter-spacing: 0.5px;
     line-height: 160%;
@@ -1213,10 +1115,7 @@ code::after {
     text-transform: uppercase;
     margin-bottom: -15px;
     margin-right: -100px;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
+    transition: var(--transition-general);
     transition-delay: 0.1s;
     outline: none;
     overflow: hidden;
@@ -1233,26 +1132,18 @@ code::after {
     transition-delay: 0.4s;
     display: block;
     width: 100%;
-    float: left;
     padding: 15px 0px;
 }
-.l-section__contact-card button svg {
+.l-section__contact-card button i {
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     opacity: 0;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
+    transition: var(--transition-general);
 }
-.l-section__contact-card button svg path {
-    fill: var(--toggle-color);
+.l-section__contact-card i {
+    color: var(--toggle-color);
 }
 .l-section__contact-card button.active {
     margin-right: 0;
@@ -1271,19 +1162,19 @@ code::after {
     transition-delay: 0s;
     width: 200px;
 }
-.l-section__contact-card button.active svg {
+.l-section__contact-card button.active i {
     opacity: 1;
-    transition-delay: 0.5s;
+    /* transition-delay: 0.5s; */
+    margin: 0 -1.8rem;
+    width: 100%;
+    height: 100%;
+    padding: 3rem;
+    color: var(--toggle-color);
 }
 .l-section__contact-item nav {
-    /* float: left; */
-
     width: 100%;
     overflow: hidden;
     max-height: 0px;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
     transition: all 0.5s;
 }
 
@@ -1297,21 +1188,11 @@ code::after {
 
 .l-section__contact-item nav.active {
     max-height: 600px;
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    -o-transition: all 1s;
     transition: all 1s;
 }
 .l-section__contact-item nav.active a {
     opacity: 1;
-    -webkit-transform: translateY(0px);
-    -moz-transform: translateY(0px);
-    -ms-transform: translateY(0px);
-    -o-transform: translateY(0px);
     transform: translateY(0px);
-    -webkit-transition: all 0.7s;
-    -moz-transition: all 0.7s;
-    -o-transition: all 0.7s;
     transition: all 0.7s;
 
     /* flex-direction: row; */
@@ -1326,27 +1207,17 @@ code::after {
     transition-delay: 1.4s;
 }
 .l-section__contact-item nav a {
-    float: left;
     width: 100%;
     margin-top: 18px;
-    background-color: #ffffff;
-    padding: 18px 20px;
+    padding: var(--padding);
     border-radius: 5px;
-    text-decoration: none;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-    opacity: 0;
-    -webkit-transform: translateY(-10px);
-    -moz-transform: translateY(-10px);
-    -ms-transform: translateY(-10px);
-    -o-transform: translateY(-10px);
-    transform: translateY(-10px);
-    /* position: relative; */
-    /* display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
+    background-color: #ffffff;
+    transition: var(--transition-general);
+    opacity: 0;
+    transform: translateY(-10px);
 }
 
 @media (min-width: 414px) {
@@ -1358,10 +1229,6 @@ code::after {
     position: absolute;
     right: 15px;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 .l-section__contact-item nav a .arrow path {
@@ -1448,7 +1315,7 @@ code::after {
     position: fixed;
     z-index: 2;
     right: 2rem;
-    bottom: 1rem;
+    bottom: 4rem;
     width: 60px;
     height: 80px;
     border: calc(60px / 10) solid var(--toggle-color);
@@ -1540,6 +1407,17 @@ code::after {
 
 /* ==================== Medias Queries ==================== */
 @media (max-width: 768px) {
+    html {
+        font-size: 50%;
+        scroll-behavior: smooth;
+    }
+
+    /* ========== Components ==========*/
+    .c-heading {
+        margin: 3rem;
+        font-size: 4.5rem;
+    }
+
     .l-section__about,
     .l-section__skill,
     .l-section__project,
@@ -1548,7 +1426,51 @@ code::after {
         padding: 0;
     }
 
+    /* ========== About ========== */
     .l-section__about-card {
         min-width: 50px;
+    }
+
+    /* ========== Navigation ========== */
+    .l-nav__menu li {
+        margin-bottom: 4rem;
+    }
+
+    .l-nav__menu li a {
+        font-size: 2rem;
+    }
+
+    /* ========== Project ========== */
+    .l-section__project-card-item {
+        height: 70rem;
+    }
+
+    .l-section__project-card-content {
+        padding: 10rem;
+        margin: 0 auto;
+        bottom: 50%;
+        /* top: 50%; */
+        opacity: 1;
+    }
+
+    .l-section__project-card-content-button {
+        gap: 4rem;
+    }
+}
+
+@media (min-width: 768px) {
+    /* ========== About ========== */
+    .l-section__about-card {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* ========== Project ========== */
+    .l-section__project-card-item:hover .l-section__project-card-image {
+        filter: blur(1rem);
+    }
+
+    .l-section__project-card-item:hover .l-section__project-card-content {
+        opacity: 1;
     }
 }

@@ -1,4 +1,14 @@
-# SEO website
+# Portfólio
+
+## 💻 Projeto
+
+<!-- SEO website foi uma aplicação prática feita para uma empresa fictícia, como treino das habilidades nas tecnologias listadas acima. O mesmo é responsivo para as diferentes resoluções. -->
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## 📢 Visite o site
+
+[Portfólio](https://lobinhodev.github.io/Portfolio-lobinhodev/).
 
 ## Pré-requisitos
 
@@ -27,10 +37,6 @@
   <img width="400"  src=".github/Mobile.gif">
 </p>
 
-## 📢 Visite o site
-
-[Portfólio](https://lobinhodev.github.io/Portfolio-lobinhodev/).
-
 ## 🧠 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
@@ -51,15 +57,20 @@ Bibliotecas
 Utilitários
 
 -   [Favicon](https://favicon.io/)
-    --decidi utilizar esse site para criação do favicon a partir da minha logo.
 -   [UiGradient](https://uigradients.com/#CocoaaIce)
 -   [CSS Wand](https://www.csswand.dev)
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## 💻 Projeto
+## Referências
 
-<!-- SEO website foi uma aplicação prática feita para uma empresa fictícia, como treino das habilidades nas tecnologias listadas acima. O mesmo é responsivo para as diferentes resoluções. -->
-
+-   [W3Schools referência HTML](https://www.w3schools.com/tags/default.asp)
+-   [W3Schools referência CSS](https://www.w3schools.com/cssref/default.asp)
+-   [Google Fonts](https://fonts.google.com/)
+-   [Coolors](https://coolors.co/palettes/trending)
+-   [Paletton](https://paletton.com/)
+-   [W3Schools propriedades CSS no DOM](https://www.w3schools.com/jsref/dom_obj_style.asp)
+-   [MDN lista de eventos](https://developer.mozilla.org/en-US/docs/Web/Events)
+-   [CSS BEM](https://desenvolvimentoparaweb.com/css/bem/)
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ---
