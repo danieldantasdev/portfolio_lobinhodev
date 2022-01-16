@@ -1,17 +1,16 @@
 # Portfólio
-<<<<<<< HEAD
 
 ## 💻 Projeto
 
-<!-- SEO website foi uma aplicação prática feita para uma empresa fictícia, como treino das habilidades nas tecnologias listadas acima. O mesmo é responsivo para as diferentes resoluções. -->
+Olá, sou lobinhodev, e aqui você encontrará meu portfólio com todos meus projetos realizados com a progressão dos meus estudos.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## 📢 Visite o site
 
 [Portfólio](https://lobinhodev.github.io/Portfolio-lobinhodev/).
-=======
->>>>>>> 6a48fe3c98708073aba1c1e090c173ae0ddf2e1c
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Pré-requisitos
 
