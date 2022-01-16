@@ -46,6 +46,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 -   HTML
 -   CSS
 -   JavaScript
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 Bibliotecas
@@ -54,6 +55,7 @@ Bibliotecas
 -   [ScrollRevel](https://scrollrevealjs.org)
 -   [FontAwesome](https://fontawesome.com/)
 -   [Hover](https://github.com/IanLunn/Hover)
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 Utilitários
@@ -61,6 +63,7 @@ Utilitários
 -   [Favicon](https://favicon.io/)
 -   [UiGradient](https://uigradients.com/#CocoaaIce)
 -   [CSS Wand](https://www.csswand.dev)
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Referências
@@ -73,6 +76,7 @@ Utilitários
 -   [W3Schools propriedades CSS no DOM](https://www.w3schools.com/jsref/dom_obj_style.asp)
 -   [MDN lista de eventos](https://developer.mozilla.org/en-US/docs/Web/Events)
 -   [CSS BEM](https://desenvolvimentoparaweb.com/css/bem/)
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ---
