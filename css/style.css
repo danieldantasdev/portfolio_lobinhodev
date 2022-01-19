@@ -1252,6 +1252,30 @@ code::after {
     }
 }
 
+/* ================== Loader ================== */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    background: var(--toggle-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.loader-container img {
+    animation: pulseHeart 1s alternate-reverse infinite;
+}
+
+.loader-container.fade-out {
+    top: -110%;
+    opacity: 0;
+}
+
 /* ==================== Medias Queries ==================== */
 @media (max-width: 1200px) {
     .l-section__interesting-item {

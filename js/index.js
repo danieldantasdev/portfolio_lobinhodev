@@ -79,13 +79,13 @@ scrollReveal.reveal(
     { interval: 200 }
 )
 
-// /* bug reprodução */
-// var myVideo = document.getElementById('video-project')
+/* Load */
+function loader() {
+    document.querySelector('.loader-container').classList.add('fade-out')
+}
 
-// function playVid() {
-//     myVideo.play()
-// }
+function fadeOut() {
+    setInterval(loader, 2000)
+}
 
-// function pauseVid() {
-//     myVideo.pause()
-// }
+window.onload = fadeOut
