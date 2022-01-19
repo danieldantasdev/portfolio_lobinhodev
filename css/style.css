@@ -1287,7 +1287,7 @@ code::after {
 
     .coffe {
         top: 10rem;
-        left: 5rem;
+        left: -40rem;
     }
 
     /* ========== Navigation ========== */
@@ -1314,6 +1314,12 @@ code::after {
 
     .l-section__project-card-content-button {
         gap: 4rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .coffe {
+        left: 5rem;
     }
 }
 
