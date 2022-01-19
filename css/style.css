@@ -53,7 +53,6 @@ html {
     background: #171717;
     filter: brightness(0.9);
     caret-color: var(--toggle-color);
-    font-size: 62.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 10rem;
@@ -138,14 +137,12 @@ code,
 
 /* ==================== Components ==================== */
 .c-heading {
-    font-size: 6rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font: 400 6rem Arial, Helvetica, sans-serif;
     color: var(--text-color);
     text-transform: capitalize;
     text-align: center;
     margin: 5rem;
-    padding: 2rem;
-    /* position: absolute; */
+    padding: 1rem;
     border-bottom: 4px solid var(--toggle-color);
     max-width: 100%;
     display: inline-block;
@@ -154,7 +151,6 @@ code,
 .c-button {
     width: 9rem;
     height: 9rem;
-    /* padding: 2rem; */
     border-radius: 50%;
     text-transform: capitalize;
     font-size: 2rem;
@@ -201,7 +197,6 @@ code,
     font-size: 3rem;
     color: var(--toggle-color);
     transition: var(--transition-general);
-    /* margin-top: 1rem; */
 }
 
 .c-social-media a:hover {
@@ -226,8 +221,6 @@ header {
     color: var(--toggle-color);
     font-size: 3.5rem;
     cursor: pointer;
-    /* opacity: 0; */
-    /* animation: moveIcons 1s 0.9s forwards; */
     transition: var(--transition-general);
     z-index: 4;
     text-shadow: 0.1rem 0.1rem 1px var(--text-shadow);
@@ -242,7 +235,6 @@ header {
 #menu-btn {
     top: 5rem;
     right: 5rem;
-    /* display: none; */
 }
 
 #theme-btn {
@@ -254,17 +246,6 @@ header {
 #menu-btn.fa-times {
     transform: rotate(180deg);
 }
-
-/* @keyframes moveIcons {
-    0% {
-        transform: translateY(50rem) rotateY(-30deg);
-    }
-    100% {
-        transform: translateY(0) rotateY(0);
-        opacity: 1;
-        transition: var(--transition-general);
-    }
-} */
 
 .l-header__wrapper-image {
     width: 100%;
@@ -300,13 +281,6 @@ header {
     z-index: 1;
 }
 
-/* .l-header__banner img {
-    position: absolute;
-    width: 15rem;
-    bottom: -4.5rem;
-    animation: moveBanner 1s 0.9s forwards;
-} */
-
 .l-header__banner img {
     max-width: 100%;
     height: 8rem;
@@ -314,9 +288,7 @@ header {
 
 .l-header__banner h1 {
     color: var(--text-color-light);
-    font-size: 6rem;
-    font-family: var(--font-primary);
-    font-weight: 200;
+    font: 200 6rem var(--font-primary);
     text-shadow: 0.3rem 0.4rem 2px var(--text-shadow);
     line-height: 8rem;
     margin-bottom: 2rem;
@@ -325,7 +297,7 @@ header {
 }
 
 .l-header__banner p {
-    font-family: var(--font-secundary);
+    font: 400 3rem var(--font-secundary);
     color: var(--text-color-light);
     font-size: 3rem;
     text-shadow: 0.2rem 0.2rem var(--text-shadow);
@@ -341,9 +313,7 @@ header {
 }
 
 .l-header__banner button {
-    font-family: var(--font-action);
-    font-weight: 500;
-    font-size: 1.5em;
+    font: 500 1.5rem var(--font-action);
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     background: var(--button-color); /* fallback for old browsers */
@@ -412,21 +382,11 @@ header {
     visibility: visible;
 }
 
-/* 
-.l-nav {
-    position: absolute;
-    top: 5%;
-    left: 75%;
-} */
-
 .l-nav__menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* position: absolute;
-    top: 40%;
-    left: 50%; */
 }
 
 .l-nav__menu li {
@@ -434,8 +394,7 @@ header {
 }
 
 .l-nav__menu li a {
-    font-family: var(--font-primary);
-    font-size: 2.5rem;
+    font: 400 2.5rem var(--font-primary);
     color: var(--text-color);
     transition: var(--transition-general);
     padding: 1rem;
@@ -444,7 +403,6 @@ header {
 
 .l-nav__menu li a:hover:not(.l-nav__menu-resume) {
     color: var(--wrapper-color);
-    /* border-bottom: solid 4px var(--toggle-color); */
     background: var(--toggle-color);
     letter-spacing: 0.2rem;
     filter: brightness(0.8);
@@ -495,12 +453,6 @@ header {
 .hvr-underline-from-left:active:before {
     right: 0;
 }
-
-/* .l-nav__social-media {
-    position: absolute;
-    top: 5%;
-    left: 75%;
-} */
 
 /* ==================== Animation do Header ==================== */
 .animation-area {
@@ -611,18 +563,14 @@ header {
     flex-direction: column;
     gap: 2rem;
     text-align: center;
-    font-size: var(--font-primary);
-    font-size: 2rem;
+    font: 400 2rem var(--font-primary);
     color: var(--text-color-light);
-    position: relative;
     background: var(--toggle-color);
     border-radius: var(--border-radius);
 }
 
 .coffe {
-    /* opacity: 0; */
-    font-size: 3rem;
-    font-family: var(--font-primary);
+    font: 400 3rem var(--font-primary);
     color: var(--text-color-light);
     position: absolute;
     bottom: 2rem;
@@ -661,8 +609,6 @@ code::after {
 }
 
 .l-section__about-image {
-    /* width: 200px; */
-    /* height: 200px; */
     background: rgba(0, 0, 0, 0.4);
     border-radius: 50%;
 }
@@ -689,21 +635,6 @@ code::after {
     background: var(--growth-color);
     line-height: 3rem;
     word-wrap: break-word;
-    /* -webkit-line-clamp: 2; */
-    /* word-break: break-all; */
-}
-
-@media (max-width: 768px) {
-    .l-section__about-card {
-        padding: 1rem;
-        /* word-break: break-all; */
-        /* -webkit-line-clamp: 2; */
-    }
-
-    .coffe {
-        top: 10rem;
-        left: 5rem;
-    }
 }
 
 /* ==================== Skills ==================== */
@@ -725,27 +656,14 @@ code::after {
     grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
     gap: 10rem;
     color: var(--text-color);
-    font-family: var(--font-primary);
-    font-size: 2rem;
+    font: 400 2rem var(--font-primary);
 }
-
-/* @media (max-width: 768px) {
-    .l-section__skill-card-item {
-        min-width: 50px;
-    }
-} */
-
-/* @media (max-width: 768px) {
-    .l-section__skill-container {
-        grid-template-columns: 1fr;
-    }
-} */
 
 .l-section__skill-card-item {
     position: relative;
     background: var(--card-color);
     padding: 2rem;
-    border-radius: 15px;
+    border-radius: var(--border-radius);
     width: 100%;
     height: auto;
 }
@@ -757,8 +675,6 @@ code::after {
 }
 
 .l-section__skill-name-item {
-    font-size: 3rem;
-    font-weight: 300;
     text-align: center;
     text-transform: uppercase;
     margin: 3rem 0 2rem;
@@ -783,7 +699,7 @@ code::after {
     font-size: 4rem;
     border-radius: 50%;
     border: 1rem solid var(--text-shadow);
-    animation: spinner4 2s linear infinite;
+    animation: spinner4 3s linear infinite;
     transform: scale(0);
 }
 
@@ -890,7 +806,6 @@ code::after {
 .l-section__project-card {
     width: var(--width);
     margin: var(--margin);
-    /* padding: var(--padding); */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
     gap: 10rem;
@@ -938,9 +853,6 @@ code::after {
 }
 
 .l-section__project-card-content-button {
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -961,12 +873,6 @@ code::after {
     align-items: center;
     gap: 10rem;
     font-size: 4rem;
-}
-
-@media (max-width: 1200px) {
-    .l-section__interesting-item {
-        flex-direction: column;
-    }
 }
 
 .l-section__interesting-card-content-icon {
@@ -1041,8 +947,7 @@ code::after {
 }
 
 .l-section__contact-aside h1 {
-    font-weight: 100;
-    font-size: 2.5rem;
+    font: 500 3rem var(--font-primary);
     margin-bottom: 1rem;
 }
 .l-section__contact-aside p {
@@ -1073,8 +978,7 @@ code::after {
 .l-section__contact-card .title p {
     padding: 2rem;
     color: var(--text-color-light);
-    font-size: 2rem;
-    font-weight: 500;
+    font: 500 2rem var(--font-primary);
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     transition: var(--transition-general);
@@ -1085,23 +989,16 @@ code::after {
     position: absolute;
     bottom: 0;
     left: 50%;
-    /* top: 50%;
-    left: 50%;
-    transform: translate(-50, -50); */
     background-color: var(--wrapper-color);
     color: var(--toggle-color);
     filter: brightness(1.5);
     width: 25rem;
     text-align: center;
     border-radius: calc(var(--border-radius) * 2);
-    font-family: inherit;
-    font-size: 2rem;
-    letter-spacing: 0.2rem;
+    font: 400 2rem inherit;
     text-transform: uppercase;
     margin-top: 16rem;
     margin-left: -12rem;
-    /* margin-bottom: -15px;
-    margin-right: -100px; */
     transition: var(--transition-general);
     transition-delay: 0.1s;
     overflow: hidden;
@@ -1128,7 +1025,6 @@ code::after {
 }
 
 .l-section__contact-card button.active {
-    /* margin-right: 0; */
     left: 45rem;
     width: 7rem;
     height: 7rem;
@@ -1206,8 +1102,7 @@ code::after {
 
 .l-nav__contact-content-info h1 {
     color: var(--growth-color);
-    font-size: 20px;
-    font-weight: 400;
+    font: 400 2.5rem var(--font-primary);
     line-height: 160%;
     letter-spacing: 0.4px;
 }
@@ -1233,7 +1128,6 @@ code::after {
 .l-footer {
     position: relative;
     width: 100%;
-    /* height: 100vh; */
     height: 100%;
     background: var(--body-color);
     padding: 4rem;
@@ -1260,7 +1154,7 @@ code::after {
 }
 
 .l-footer .c-social-media a i:hover {
-    transform: translateY(-20px);
+    transform: translateY(-15px);
 }
 
 /* ==================== Scroll-to-top ==================== */
@@ -1359,6 +1253,11 @@ code::after {
 }
 
 /* ==================== Medias Queries ==================== */
+@media (max-width: 1200px) {
+    .l-section__interesting-item {
+        flex-direction: column;
+    }
+}
 
 @media (max-width: 768px) {
     html {
@@ -1383,6 +1282,12 @@ code::after {
     /* ========== About ========== */
     .l-section__about-card {
         min-width: 50px;
+        padding: 1rem;
+    }
+
+    .coffe {
+        top: 10rem;
+        left: 5rem;
     }
 
     /* ========== Navigation ========== */
@@ -1412,6 +1317,16 @@ code::after {
     }
 }
 
+@media (max-width: 375px) {
+    html {
+        font-size: 45%;
+    }
+
+    .l-section__contact-card button.active {
+        left: 105%;
+    }
+}
+
 @media (min-width: 768px) {
     /* ========== About ========== */
     .l-section__about-card {
@@ -1427,11 +1342,10 @@ code::after {
     .l-section__project-card-item:hover .l-section__project-card-content {
         opacity: 1;
     }
-}
 
-@media (max-width: 375px) {
-    html {
-        font-size: 45%;
+    /* ========== Contact ========== */
+    .l-section__contact-card button.active {
+        left: 95%;
     }
 }
 
