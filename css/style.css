@@ -995,7 +995,7 @@ code::after {
     width: 25rem;
     text-align: center;
     border-radius: calc(var(--border-radius) * 2);
-    font: 400 2rem inherit;
+    font: 400 2rem var(--font-primary);
     text-transform: uppercase;
     margin-top: 16rem;
     margin-left: -12rem;
