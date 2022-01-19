@@ -216,7 +216,9 @@ header {
 }
 
 #menu-btn,
-#theme-btn {
+#theme-btn,
+#increase-btn,
+#decrease-btn {
     position: fixed;
     color: var(--toggle-color);
     font-size: 3.5rem;
@@ -227,7 +229,10 @@ header {
 }
 
 #menu-btn:hover,
-#theme-btn:hover {
+#theme-btn:hover,
+#font-btn:hover,
+#increase-btn:hover,
+#decrease-btn:hover {
     filter: brightness(1.2);
     transform: scale(1.2);
 }
@@ -242,9 +247,29 @@ header {
     left: 5rem;
 }
 
+#increase-btn {
+    top: 12rem;
+    left: 5rem;
+}
+
+#decrease-btn {
+    top: 19rem;
+    left: 5rem;
+}
+
 #theme-btn.fa-sun,
-#menu-btn.fa-times {
+#menu-btn.fa-times,
+#font-btn.fa-font {
     transform: rotate(180deg);
+}
+
+body.growth {
+    font-size: 10rem;
+}
+
+#font-btn.fa-font.growth {
+    font-size: 90rem;
+    background: red;
 }
 
 .l-header__wrapper-image {

@@ -27,6 +27,28 @@ menuHamburguer.addEventListener('click', () => {
         .classList.toggle('show-menu')
 })
 
+/* Aumentar fonte do site */
+
+var elementBody = document.querySelector('html')
+var elementBtnIncreaseFont = document.getElementById('increase-btn')
+var elementBtnDecreaseFont = document.getElementById('decrease-btn')
+// Padrão de tamanho, equivale a 100% do valor definido no Body
+var fontSize = 62.5
+// Valor de incremento ou decremento, equivale a 10% do valor do Body
+var increaseDecrease = 10
+
+// Evento de click para aumentar a fonte
+elementBtnIncreaseFont.addEventListener('click', function (event) {
+    fontSize = fontSize + increaseDecrease
+    elementBody.style.fontSize = fontSize + '%'
+})
+
+// Evento de click para diminuir a fonte
+elementBtnDecreaseFont.addEventListener('click', function (event) {
+    fontSize = fontSize - increaseDecrease
+    elementBody.style.fontSize = fontSize + '%'
+})
+
 /* Botão voltar para o topo = escrevendo em camel Case*/
 const backToTopButton = document.querySelector('.scroll-to-top') /* Kebab case*/
 
