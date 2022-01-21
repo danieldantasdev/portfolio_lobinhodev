@@ -53,6 +53,7 @@ Bibliotecas
 
 -   [Google Fonts](https://fonts.google.com/)
 -   [ScrollRevel](https://scrollrevealjs.org)
+-   [SwiperJs](https://swiperjs.com)
 -   [FontAwesome](https://fontawesome.com/)
 -   [Hover](https://github.com/IanLunn/Hover)
 

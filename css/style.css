@@ -447,7 +447,7 @@ body.growth {
     margin-left: 1rem;
 }
 
-/* ==================== Utilizando a biblioteca Hover ==================== */
+/* ==================== Biblioteca Hover ==================== */
 .hvr-underline-from-left {
     display: inline-block;
     vertical-align: middle;
@@ -822,19 +822,21 @@ code::after {
     margin: var(--margin);
     padding: var(--padding);
     background-color: var(--body-color);
+    overflow-x: hidden;
+    position: relative;
 }
 
 .l-section__project-item {
     padding: var(--padding);
 }
-
+/* 
 .l-section__project-card {
     width: var(--width);
     margin: var(--margin);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
     gap: 10rem;
-}
+} */
 
 .l-section__project-card-item {
     height: 50rem;
@@ -882,6 +884,35 @@ code::after {
     justify-content: center;
     align-items: center;
     gap: 3rem;
+}
+
+/* ==================== Swiper ==================== */
+.swiper-container,
+.swiper-wrapper {
+    position: relative;
+    cursor: grabbing;
+}
+
+.swiper-slide {
+    height: auto;
+    padding: 4rem 1rem;
+    position: relative;
+}
+
+.swiper-pagination-bullet {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: relative;
+    top: 1rem;
+}
+
+.swiper-pagination {
+    width: 3rem;
+    height: 3rem;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--toggle-color);
 }
 
 /* ==================== Interesting ==================== */

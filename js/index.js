@@ -1,4 +1,4 @@
-/* Dark Mode */
+/* ==================== Dark Mode ==================== */
 let menu = document.querySelector('#menu-btn')
 let navbar = document.querySelector('.l-header .l-nav')
 
@@ -19,7 +19,7 @@ themeBtn.onclick = () => {
     }
 }
 
-/* Mostrar menu */
+/* ==================== Mostrar menu ==================== */
 var menuHamburguer = document.querySelector('#menu-btn')
 menuHamburguer.addEventListener('click', () => {
     var nav = document
@@ -27,8 +27,7 @@ menuHamburguer.addEventListener('click', () => {
         .classList.toggle('show-menu')
 })
 
-/* Aumentar fonte do site */
-
+/* ==================== Aumentar fonte do site ==================== */
 var elementBody = document.querySelector('html')
 var elementBtnIncreaseFont = document.getElementById('increase-btn')
 var elementBtnDecreaseFont = document.getElementById('decrease-btn')
@@ -49,8 +48,8 @@ elementBtnDecreaseFont.addEventListener('click', function (event) {
     elementBody.style.fontSize = fontSize + '%'
 })
 
-/* Botão voltar para o topo = escrevendo em camel Case*/
-const backToTopButton = document.querySelector('.scroll-to-top') /* Kebab case*/
+/* ==================== Scroll-to-top ==================== */
+const backToTopButton = document.querySelector('.scroll-to-top')
 
 function backToTop() {
     if (window.scrollY >= 560) {
@@ -75,14 +74,14 @@ jQuery('.scroll-to-top').on('click', function (event) {
     return false
 })
 
-/* Contact */
+/* ==================== Contact ==================== */
 $('button').click(function () {
     $('button').toggleClass('active')
     $('.title').toggleClass('active')
     $('nav').toggleClass('active')
 })
 
-/* ScrollReveal: Mostrar elementos quando der scroll na página */
+/* ==================== ScrollReveal ==================== */
 const scrollReveal = ScrollReveal({
     origin: 'top',
     distance: '30px',
@@ -94,14 +93,29 @@ scrollReveal.reveal(
     `
     #about .l-section__about-card,
     #skills .l-section__skill-card-item,
-    #projects .l-section__project-card-item,
     #interesting .l-section__interesting-card-content,
     #contact 
     `,
     { interval: 200 }
 )
 
-/* Load */
+/* ==================== Slider swiper ==================== */
+const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    pagination: {
+        el: '.swiper-pagination'
+    },
+    mousewheel: true,
+    keyboard: true,
+    breakpoints: {
+        767: {
+            slidesPerView: 4,
+            setWrapperSize: true
+        }
+    }
+})
+
+/* ==================== Load ==================== */
 function loader() {
     document.querySelector('.loader-container').classList.add('fade-out')
 }
