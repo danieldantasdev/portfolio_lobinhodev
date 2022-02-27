@@ -1320,6 +1320,7 @@ code::after {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     overflow: hidden;
 }
 
@@ -1332,6 +1333,35 @@ code::after {
     opacity: 0;
 }
 
+.loading-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter {
+    text-align: center;
+    position: relative;
+    width: 200px;
+}
+
+.counter h1 {
+    color: white;
+    font-size: 60px;
+    margin-top: -10px;
+}
+
+.counter hr {
+    background: #f60d54;
+    border: none;
+    height: 1px;
+}
+
+.counter .color {
+    width: 0px;
+    overflow: hidden;
+    color: #f60d54;
+}
 /* ==================== Medias Queries ==================== */
 @media (max-width: 1200px) {
     .l-section__interesting-item {

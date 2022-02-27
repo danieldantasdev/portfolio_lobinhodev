@@ -59,20 +59,30 @@ function backToTop() {
     }
 }
 
-var offset = 1000
-var duration = 100
-jQuery(window).on('scroll', function () {
-    if (jQuery(this).scrollTop() > offset) {
-        jQuery('.scroll-to-top').addClass('show')
-    } else {
-        jQuery('.scroll-to-top').removeClass('show')
-    }
-})
-jQuery('.scroll-to-top').on('click', function (event) {
-    event.preventDefault()
-    jQuery('html, body').animate({ scrollTop: 0 }, duration)
-    return false
-})
+window.addEventListener('scroll', backToTop)
+
+// var offset = 1000
+// var duration = 100
+// jQuery(window).on('scroll', function () {
+//     if (jQuery(this).scrollTop() > offset) {
+//         jQuery('.scroll-to-top').addClass('show')
+//     } else {
+//         jQuery('.scroll-to-top').removeClass('show')
+//     }
+// })
+// jQuery('.scroll-to-top').on('click', function (event) {
+//     event.preventDefault()
+//     jQuery('html, body').animate({ scrollTop: 0 }, duration)
+//     return false
+// })
+
+// function scrollUp() {
+//     const scrollUp = document.querySelector('.scroll-to-top')
+//     // When the scroll is higher than 460 viewport height, add the show-scroll class to the a tag with the scroll-top class
+//     if (this.scrollY >= 560) scrollUp.classList.add('show')
+//     else scrollUp.classList.remove('show')
+// }
+// window.addEventListener('scroll', scrollUp)
 
 /* ==================== Contact ==================== */
 $('button').click(function () {
@@ -121,7 +131,27 @@ function loader() {
 }
 
 function fadeOut() {
-    setInterval(loader, 2000)
+    setInterval(loader, 5000)
 }
 
 window.onload = fadeOut
+
+$(document).ready(function () {
+    var counter = 0
+    var c = 0
+    var i = setInterval(function () {
+        $('.loading-page .counter h1').html(c + '%')
+        $('.loading-page .counter hr').css('width', c + '%')
+        //$(".loading-page .counter").css("background", "linear-gradient(to right, #f60d54 "+ c + "%,#0d0d0d "+ c + "%)");
+
+        /*
+        $(".loading-page .counter h1.color").css("width", c + "%");
+      */
+        counter++
+        c++
+
+        if (counter == 101) {
+            clearInterval(i)
+        }
+    }, 50)
+})
