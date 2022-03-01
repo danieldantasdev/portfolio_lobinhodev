@@ -1346,15 +1346,15 @@ code::after {
 }
 
 .counter h1 {
-    color: white;
+    color: var(--body-color);
     font-size: 60px;
     margin-top: -10px;
 }
 
 .counter hr {
-    background: #f60d54;
+    background: var(--body-color);
     border: none;
-    height: 1px;
+    height: 5px;
 }
 
 .counter .color {

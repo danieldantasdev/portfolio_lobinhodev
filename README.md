@@ -56,6 +56,7 @@ Bibliotecas
 -   [SwiperJs](https://swiperjs.com)
 -   [FontAwesome](https://fontawesome.com/)
 -   [Hover](https://github.com/IanLunn/Hover)
+-   [Particle.js](https://vincentgarreau.com/particles.js/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
